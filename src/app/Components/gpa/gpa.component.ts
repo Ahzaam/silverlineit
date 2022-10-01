@@ -13,6 +13,7 @@ export class GpaComponent implements OnInit {
   email:string |any;
   student:any;
 
+
   gpaForm:any;
 
   constructor(private db:AngularFirestore, private route: ActivatedRoute, private fb:FormBuilder, ) { }

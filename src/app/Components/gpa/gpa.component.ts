@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore  } from '@angular/fire/compat/firestore';
 import { ActivatedRoute } from '@angular/router';
-
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-gpa',
@@ -23,6 +23,11 @@ this.db.collection('Students').doc(this.email).get()
 .forEach(responce => {
   this.student=  responce.data()
 })
+
+  }
+
+
+  submit(){
 
   }
 

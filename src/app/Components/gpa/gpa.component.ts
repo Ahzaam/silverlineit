@@ -12,7 +12,10 @@ export class GpaComponent implements OnInit {
 
   email:string |any;
   student:any;
-  constructor(private db:AngularFirestore, private route: ActivatedRoute) { }
+
+  gpaForm:any;
+
+  constructor(private db:AngularFirestore, private route: ActivatedRoute, private fb:FormBuilder, ) { }
 
   ngOnInit(): void{
 
@@ -22,6 +25,13 @@ export class GpaComponent implements OnInit {
 this.db.collection('Students').doc(this.email).get()
 .forEach(responce => {
   this.student=  responce.data()
+
+
+  this.gpaForm = this.fb.group({
+   maths:{credits:'', gpa:''},
+   cse:{credits:'', gpa:''}
+    
+  })
 })
 
   }

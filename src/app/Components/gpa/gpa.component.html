@@ -3,25 +3,31 @@
         <h4 class="h4">{{ student.faculty}}</h4>
         <form   class="offset-md-3 col-md-6">
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">First Name</label>
-              <input type="text" formControlName="Fname" class="form-control" id="name" aria-describedby="emailHelp">
-              <input type="text" formControlName="Fname" class="form-control" id="name" aria-describedby="emailHelp">
+              <label for="exampleInputEmail1" class="form-label">Maths</label>
+            <div class="row">
+                <div class="col-8">
+                    <input type="text" formControlName="maths.credits" class="form-control  col-8" id="mgpa" aria-describedby="emailHelp">
+                </div>
+                  <div class="col-3">
+                    <input type="text" formControlName="maths.gpa" class="form-control col-3" id="mcredits" aria-describedby="emailHelp">
+                  </div>
+            </div>
     
             </div>
 
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">First Name</label>
-                <input type="text" formControlName="Fname" class="form-control" id="name" aria-describedby="emailHelp">
+                <label for="exampleInputEmail1" class="form-label">CSE</label>
+              <div class="row">
+                  <div class="col-8">
+                      <input type="text" formControlName="maths.credits" class="form-control  col-8" id="mgpa" aria-describedby="emailHelp">
+                  </div>
+                    <div class="col-3">
+                      <input type="text" formControlName="maths.gpa" class="form-control col-3" id="mcredits" aria-describedby="emailHelp">
+                    </div>
+              </div>
       
               </div>
 
-              <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">First Name</label>
-                <input type="text" formControlName="Fname" class="form-control" id="name" aria-describedby="emailHelp">
-      
-              </div>
-            
-    
             
             <button type="submit" class="btn btn-primary" (click)="submit()">Add Student</button>
           </form>

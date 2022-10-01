@@ -1,0 +1,17 @@
+<div class="container" *ngIf="student">
+    <div class="offset-md-3 col-6">
+        <h4 class="h4">{{ student.faculty}}</h4>
+        <form   class="offset-md-3 col-md-6">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">First Name</label>
+              <input type="text" formControlName="Fname" class="form-control" id="name" aria-describedby="emailHelp">
+    
+            </div>
+            
+    
+            
+            <button type="submit" class="btn btn-primary" (click)="submit()">Add Student</button>
+          </form>
+    
+    </div>
+</div>
